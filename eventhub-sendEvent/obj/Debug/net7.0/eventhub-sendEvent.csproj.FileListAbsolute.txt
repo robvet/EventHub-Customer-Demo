@@ -1,0 +1,15 @@
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-sendEvent\bin\Debug\net7.0\eventhub-sendEvent.deps.json
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-sendEvent\bin\Debug\net7.0\eventhub-sendEvent.dll
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-sendEvent\bin\Debug\net7.0\eventhub-sendEvent.pdb
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-sendEvent\obj\Debug\net7.0\eventhub-sendEvent.csproj.AssemblyReference.cache
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-sendEvent\obj\Debug\net7.0\eventhub-sendEvent.GeneratedMSBuildEditorConfig.editorconfig
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-sendEvent\obj\Debug\net7.0\eventhub-sendEvent.AssemblyInfoInputs.cache
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-sendEvent\obj\Debug\net7.0\eventhub-sendEvent.AssemblyInfo.cs
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-sendEvent\obj\Debug\net7.0\eventhub-sendEvent.csproj.CoreCompileInputs.cache
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-sendEvent\obj\Debug\net7.0\eventhub-sendEvent.dll
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-sendEvent\obj\Debug\net7.0\refint\eventhub-sendEvent.dll
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-sendEvent\obj\Debug\net7.0\eventhub-sendEvent.pdb
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-sendEvent\obj\Debug\net7.0\ref\eventhub-sendEvent.dll
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-sendEvent\bin\Debug\net7.0\eventhub-shared.dll
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-sendEvent\bin\Debug\net7.0\eventhub-shared.pdb
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-sendEvent\obj\Debug\net7.0\eventhub-sendEvent.csproj.CopyComplete

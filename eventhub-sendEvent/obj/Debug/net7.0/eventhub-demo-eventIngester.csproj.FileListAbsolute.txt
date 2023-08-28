@@ -1,0 +1,12 @@
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-eventIngester\bin\Debug\net7.0\eventhub-demo-eventIngester.deps.json
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-eventIngester\bin\Debug\net7.0\eventhub-demo-eventIngester.dll
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-eventIngester\bin\Debug\net7.0\eventhub-demo-eventIngester.pdb
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-eventIngester\obj\Debug\net7.0\eventhub-demo-eventIngester.csproj.AssemblyReference.cache
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-eventIngester\obj\Debug\net7.0\eventhub-demo-eventIngester.GeneratedMSBuildEditorConfig.editorconfig
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-eventIngester\obj\Debug\net7.0\eventhub-demo-eventIngester.AssemblyInfoInputs.cache
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-eventIngester\obj\Debug\net7.0\eventhub-demo-eventIngester.AssemblyInfo.cs
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-eventIngester\obj\Debug\net7.0\eventhub-demo-eventIngester.csproj.CoreCompileInputs.cache
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-eventIngester\obj\Debug\net7.0\eventhub-demo-eventIngester.dll
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-eventIngester\obj\Debug\net7.0\refint\eventhub-demo-eventIngester.dll
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-eventIngester\obj\Debug\net7.0\eventhub-demo-eventIngester.pdb
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-eventIngester\obj\Debug\net7.0\ref\eventhub-demo-eventIngester.dll
