@@ -31,37 +31,37 @@
 //    {
 //        var consumerClients = new List<EventHubConsumerClient>();
 
-//        try
-//        {
-//            // Create consumer clients for each partition
-//            string[] partitionIds = (await new EventHubClient(connectionString, eventHubName).GetPartitionIdsAsync()).ToArray();
+////try
+////{
+////    // Create consumer clients for each partition
+////    string[] partitionIds = (await new EventHubClient(connectionString, eventHubName).GetPartitionIdsAsync()).ToArray();
 
-//            foreach (string partitionId in partitionIds)
-//            {
-//                var consumerClient = new EventHubConsumerClient(consumerGroup, connectionString, eventHubName, partitionId);
-//                consumerClients.Add(consumerClient);
+////    foreach (string partitionId in partitionIds)
+////    {
+////        var consumerClient = new EventHubConsumerClient(consumerGroup, connectionString, eventHubName, partitionId);
+////        consumerClients.Add(consumerClient);
 
-//                // Start processing events for each partition
-//                _ = Task.Run(async () =>
-//                {
-//                    await foreach (PartitionEvent receivedEvent in consumerClient.ReadEventsAsync())
-//                    {
-//                        // Process the event data
-//                        Console.WriteLine($"Event received on partition {receivedEvent.PartitionId}: {Encoding.UTF8.GetString(receivedEvent.Data.Body.ToArray())}");
-//                    }
-//                });
-//            }
+////        // Start processing events for each partition
+////        _ = Task.Run(async () =>
+////        {
+////            await foreach (PartitionEvent receivedEvent in consumerClient.ReadEventsAsync())
+////            {
+////                // Process the event data
+////                Console.WriteLine($"Event received on partition {receivedEvent.PartitionId}: {Encoding.UTF8.GetString(receivedEvent.Data.Body.ToArray())}");
+////            }
+////        });
+////    }
 
-//            // Keep the consumers running for a while
-//            await Task.Delay(TimeSpan.FromSeconds(30));
-//        }
-//        finally
-//        {
-//            // Close the consumer clients
-//            foreach (var consumerClient in consumerClients)
-//            {
-//                await consumerClient.CloseAsync();
-//            }
-//        }
+////    // Keep the consumers running for a while
+////    await Task.Delay(TimeSpan.FromSeconds(30));
+////}
+////finally
+////{
+////    // Close the consumer clients
+////    foreach (var consumerClient in consumerClients)
+////    {
+////        await consumerClient.CloseAsync();
+////    }
+////}
 //    }
 //}

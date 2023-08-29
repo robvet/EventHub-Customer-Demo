@@ -3,6 +3,7 @@ using eventhub_demo_eventIngester.EventIngestion;
 using eventhub_shared.Contracts;
 using eventhub_shared.Types;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 
 namespace eventhub.producer.EventGenerator
 {
@@ -11,17 +12,25 @@ namespace eventhub.producer.EventGenerator
         private static long A53Counter = 0;
         private static long S60Counter = 0;
         private static long T60Counter = 0;
-        private readonly int numOfEvents = 100;
+        private readonly int numOfEvents = 20;
 
         private ISendEvent _sendEvent; 
+        private readonly ILogger _logger;
+        private readonly IConfiguration _config;
+
+        public GenerateEvents(ILogger logger, IConfiguration config)
+        {
+            _logger = logger;
+            _config = config;
+        }
 
         //public async Task GenerateEventsAsync(string eventHubName,
         //                                     string eventHubConnectionString,
         //                                     string appInsightsConnectionString,
         //                                     IConfiguration config)
-        public async Task GenerateEventsAsync(IConfiguration config)
+        public async Task GenerateEventsAsync()
         {
-            _sendEvent = new SendEvent(config);
+            _sendEvent = new SendEvent(_logger, _config);
 
             for (int i = 1; i <= numOfEvents; i++)
             {
@@ -31,15 +40,15 @@ namespace eventhub.producer.EventGenerator
                 {
                     case 0:
                         var a53Event = CreateA53Event();
-                        await _sendEvent.SendAsync(new EventContainer("a53", a53Event));
+                        await _sendEvent.SendAsync(new EventContainer("A53", a53Event));
                         break;
                     case 1:
                         var s60Event = CreateS60Event();
-                        await _sendEvent.SendAsync(new EventContainer("s60", s60Event));
+                        await _sendEvent.SendAsync(new EventContainer("S60", s60Event));
                         break;
                     case 2:
                         var t60Event = CreateT60Event();
-                        await _sendEvent.SendAsync(new EventContainer("t60", t60Event));
+                        await _sendEvent.SendAsync(new EventContainer("T60", t60Event));
                         break;
                 }
             }

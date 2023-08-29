@@ -13,7 +13,7 @@ namespace eventhub.producer.Events
                         string paymentMethod,
                         string receiptNumber,
                         int pumpNumber,
-                        long transactionCounter)
+                        long orderCount)
         {
             TransactionId = Guid.NewGuid();
             TransactionDate = DateTime.UtcNow;
@@ -24,7 +24,7 @@ namespace eventhub.producer.Events
             PaymentMethod = paymentMethod;
             ReceiptNumber = receiptNumber;
             PumpNumber = pumpNumber;
-            TransactionCounter = transactionCounter;
+            OrderCount = orderCount;
         }
 
         public string FuelType { get; set; }
@@ -36,6 +36,6 @@ namespace eventhub.producer.Events
         public Guid TransactionId { get; set; }
         public string TransactionType { get; set; }
         public DateTime TransactionDate { get; set; }
-        public long TransactionCounter { get; set; }
+        public long OrderCount { get; set; }
     }
 }

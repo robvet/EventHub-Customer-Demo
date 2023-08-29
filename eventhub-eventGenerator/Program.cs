@@ -8,11 +8,16 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using eventhub_demo_eventIngester.EventIngestion;
 
+using Microsoft.Extensions.Logging;
 HostApplicationBuilder builder = Host.CreateApplicationBuilder(args);
 
 builder.Services.AddScoped<ISendEvent, SendEvent>();
 
-//builder.ConfigureAppConfiguration((hostingContext, config) =>
+ILogger logger = LoggerFactory
+                 .Create(builder => builder.AddConsole())
+                 .CreateLogger("MyProgram");
+
+logger.LogInformation($"EventSender application is starting{Environment.NewLine}");
 
 // Create a new configuration builder
 var config = new ConfigurationBuilder()
@@ -24,6 +29,8 @@ var config = new ConfigurationBuilder()
 var serviceProvider = new ServiceCollection()
                 .AddSingleton<ISendEvent, SendEvent>()
                 .BuildServiceProvider();
+
+
 
 //var service = serviceProvider.GetService<ISendEvent>();
 
@@ -50,7 +57,8 @@ var serviceProvider = new ServiceCollection()
 //var eventHubConnectionString = config["eventHubConnectionString"];
 //var appInsightsConnectionString = config["applicationInsightsInstrumentationKey"];
 
-await new GenerateEvents().GenerateEventsAsync(config);
+
+await new GenerateEvents(logger, config).GenerateEventsAsync();
 
 //await new ProduceEvents().ProduceEventsAsync(eventHubName,
 //                                             eventHubConnectionString,

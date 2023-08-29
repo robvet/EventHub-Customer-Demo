@@ -34,3 +34,5 @@ C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\ev
 C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-consumer\obj\Debug\net7.0\eventhub-demo-consumer.pdb
 C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-consumer\obj\Debug\net7.0\eventhub-demo-consumer.genruntimeconfig.cache
 C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-consumer\obj\Debug\net7.0\ref\eventhub-demo-consumer.dll
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-consumer\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-consumer\bin\Debug\net7.0\Azure.Messaging.EventGrid.dll

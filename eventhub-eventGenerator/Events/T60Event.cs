@@ -14,7 +14,7 @@ namespace eventhub.producer.Events
                         Guid transactionId,
                         string transactionType,
                         DateTime transactionDate,
-                        long transactionCounter)
+                        long orderCount)
         {
             TransactionId = Guid.NewGuid();
             TransactionDate = DateTime.UtcNow;
@@ -23,7 +23,7 @@ namespace eventhub.producer.Events
             Price = price;
             LotteryType = lotteryType;
             WinningNumbers = winningNumbers;
-            TransactionCounter = transactionCounter;
+            OrderCount = orderCount;
         }
 
         public int Quantity { get; set; }
@@ -33,6 +33,6 @@ namespace eventhub.producer.Events
         public Guid TransactionId { get; set; }
         public string TransactionType { get; set; }
         public DateTime TransactionDate { get; set; }
-        public long TransactionCounter { get; set; }
+        public long OrderCount { get; set; }
     }
 }

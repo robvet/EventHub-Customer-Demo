@@ -132,6 +132,14 @@
               "target": "Package",
               "version": "[5.9.2, )"
             },
+            "Microsoft.ApplicationInsights": {
+              "target": "Package",
+              "version": "[2.21.0, )"
+            },
+            "Microsoft.ApplicationInsights.DependencyCollector": {
+              "target": "Package",
+              "version": "[2.21.0, )"
+            },
             "Microsoft.Extensions.Configuration.EnvironmentVariables": {
               "target": "Package",
               "version": "[7.0.0, )"
@@ -139,6 +147,10 @@
             "Microsoft.Extensions.Configuration.UserSecrets": {
               "target": "Package",
               "version": "[6.0.1, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",

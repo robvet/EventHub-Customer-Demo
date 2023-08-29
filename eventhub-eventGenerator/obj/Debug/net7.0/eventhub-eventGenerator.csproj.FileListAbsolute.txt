@@ -53,3 +53,5 @@ C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\ev
 C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-eventGenerator\obj\Debug\net7.0\ref\eventhub-eventGenerator.dll
 C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-eventGenerator\bin\Debug\net7.0\eventhub-shared.dll
 C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-eventGenerator\bin\Debug\net7.0\eventhub-shared.pdb
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-eventGenerator\bin\Debug\net7.0\Microsoft.ApplicationInsights.dll
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-eventGenerator\bin\Debug\net7.0\Microsoft.AI.DependencyCollector.dll

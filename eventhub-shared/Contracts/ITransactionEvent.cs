@@ -5,6 +5,6 @@
         Guid TransactionId { get; set; }
         string TransactionType { get; set; }
         DateTime TransactionDate { get; set; }
-        long TransactionCounter { get; set; }
+        long OrderCount { get; set; }
     }
 }
