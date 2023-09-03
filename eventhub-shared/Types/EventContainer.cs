@@ -1,16 +1,17 @@
 ﻿using eventhub_shared.Contracts;
+using eventhub_shared.Enumerations;
 
 namespace eventhub_shared.Types
 {
     public class EventContainer
     {
-        public EventContainer(string transactionType, ITransactionEvent eventPayload)
+        public EventContainer(TransactionTypeEnum transactionType, ITransactionEvent eventPayload)
         {
-            TransactionType = transactionType;
+            TransactionTypeEnum = transactionType;
             EventPayload = eventPayload;
         }
 
-        public string TransactionType { get; set; }
+        public TransactionTypeEnum TransactionTypeEnum { get; set; }
         public ITransactionEvent EventPayload { get; set; }
     }
 }

@@ -6,7 +6,6 @@ C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\ev
 C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-consumer\bin\Debug\net7.0\Azure.Core.dll
 C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-consumer\bin\Debug\net7.0\Azure.Core.Amqp.dll
 C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-consumer\bin\Debug\net7.0\Azure.Messaging.EventHubs.dll
-C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-consumer\bin\Debug\net7.0\Azure.Messaging.EventHubs.Processor.dll
 C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-consumer\bin\Debug\net7.0\Azure.Storage.Blobs.dll
 C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-consumer\bin\Debug\net7.0\Azure.Storage.Common.dll
 C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-consumer\bin\Debug\net7.0\Microsoft.Azure.Amqp.dll
@@ -34,5 +33,18 @@ C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\ev
 C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-consumer\obj\Debug\net7.0\eventhub-demo-consumer.pdb
 C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-consumer\obj\Debug\net7.0\eventhub-demo-consumer.genruntimeconfig.cache
 C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-consumer\obj\Debug\net7.0\ref\eventhub-demo-consumer.dll
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-consumer\bin\Debug\net7.0\Microsoft.Azure.EventHubs.dll
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-consumer\bin\Debug\net7.0\Microsoft.Azure.EventHubs.Processor.dll
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-consumer\bin\Debug\net7.0\Microsoft.Azure.KeyVault.Core.dll
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-consumer\bin\Debug\net7.0\Microsoft.Azure.Services.AppAuthentication.dll
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-consumer\bin\Debug\net7.0\Microsoft.Azure.Storage.Blob.dll
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-consumer\bin\Debug\net7.0\Microsoft.Azure.Storage.Common.dll
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-consumer\bin\Debug\net7.0\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-consumer\bin\Debug\net7.0\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-consumer\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-consumer\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-consumer\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
 C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-consumer\bin\Debug\net7.0\Newtonsoft.Json.dll
-C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-consumer\bin\Debug\net7.0\Azure.Messaging.EventGrid.dll
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-consumer\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-consumer\bin\Debug\net7.0\eventhub-shared.dll
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\eventhub-demo-consumer\bin\Debug\net7.0\eventhub-shared.pdb

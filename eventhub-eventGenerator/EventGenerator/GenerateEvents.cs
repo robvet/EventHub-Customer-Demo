@@ -1,6 +1,7 @@
 ﻿using eventhub.producer.Events;
 using eventhub_demo_eventIngester.EventIngestion;
 using eventhub_shared.Contracts;
+using eventhub_shared.Enumerations;
 using eventhub_shared.Types;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
@@ -9,9 +10,9 @@ namespace eventhub.producer.EventGenerator
 {
     public class GenerateEvents
     {
-        private static long A53Counter = 0;
-        private static long S60Counter = 0;
-        private static long T60Counter = 0;
+        private static long T100Counter = 0;
+        private static long T200Counter = 0;
+        private static long T300Counter = 0;
         private readonly int numOfEvents = 20;
 
         private ISendEvent _sendEvent; 
@@ -39,36 +40,41 @@ namespace eventhub.producer.EventGenerator
                 switch (transaction)
                 {
                     case 0:
-                        var a53Event = CreateA53Event();
-                        await _sendEvent.SendAsync(new EventContainer("A53", a53Event));
+                        var T100Event = CreateT100Event();
+                        await _sendEvent.SendAsync(
+                            new EventContainer(TransactionTypeEnum.Gasoline, T100Event));
                         break;
+
                     case 1:
-                        var s60Event = CreateS60Event();
-                        await _sendEvent.SendAsync(new EventContainer("S60", s60Event));
+                        var T200Event = CreateT200Event();
+                        await _sendEvent.SendAsync(
+                            new EventContainer(TransactionTypeEnum.Grocery, T200Event));
                         break;
+
                     case 2:
-                        var t60Event = CreateT60Event();
-                        await _sendEvent.SendAsync(new EventContainer("T60", t60Event));
+                        var T300Event = CreateT300Event();
+                        await _sendEvent.SendAsync(
+                            new EventContainer(TransactionTypeEnum.Lottery, T300Event));
                         break;
                 }
             }
         }
 
-        private ITransactionEvent CreateA53Event()
+        private ITransactionEvent CreateT100Event()
         {
-            var eventClass = new A53Event("Diesel",
+            var eventClass = new GasolineSaleEvent("Diesel",
                                           10,
                                           1.5m,
                                           "Cash",
                                           "123456",
                                           1,
-                                          A53Counter++);
+                                          T100Counter++);
 
             return eventClass;
 
         }
 
-        private ITransactionEvent CreateS60Event()
+        private ITransactionEvent CreateT200Event()
         {
 
             // create products purchased
@@ -78,7 +84,7 @@ namespace eventhub.producer.EventGenerator
                 new Item("item2", 1, 5.99m)
             };
 
-            var eventClass = new S60Event(9.99m,
+            var eventClass = new GrocerySaleEvent(9.99m,
                                           12345678,
                                           1,
                                           "Store1",
@@ -87,22 +93,22 @@ namespace eventhub.producer.EventGenerator
                                           Guid.NewGuid(),
                                           "Sale",
                                           DateTime.Now,
-                                          S60Counter++,
+                                          T200Counter++,
                                           items);
 
             return eventClass;
         }
 
-        private ITransactionEvent CreateT60Event()
+        private ITransactionEvent CreateT300Event()
         {
-            var eventClass = new T60Event(1,
+            var eventClass = new LotterySaleEvent(1,
                                           1.99m,
                                           "Texas Lotto",
                                           "123-456-789",
                                           Guid.NewGuid(),
                                           "Sale",
                                           DateTime.Now,
-                                          T60Counter++);
+                                          T300Counter++);
 
             return eventClass;
         }

@@ -1,5 +1,7 @@
 ﻿using Azure.Messaging.EventHubs;
 using Azure.Messaging.EventHubs.Producer;
+using eventhub_shared.Enumerations;
+using eventhub_shared.PartitionManager;
 using eventhub_shared.Types;
 using Microsoft.ApplicationInsights.DependencyCollector;
 using Microsoft.ApplicationInsights.Extensibility;
@@ -43,7 +45,7 @@ namespace eventhub_demo_eventIngester.EventIngestion
             // Create a producer client that you can use to send events to an event hub
             // The Event Hubs client types are safe to cache and use as a singleton for the lifetime
             // of the application, which is best practice when events are being published or read regularly.
-            _producerClient = new EventHubProducerClient(eventHubConnectionString, eventHubName);
+            ////_producerClient = new EventHubProducerClient(eventHubConnectionString, eventHubName);
 
 
             // Maybe use the EventHubBufferedProducerClient???
@@ -51,17 +53,17 @@ namespace eventhub_demo_eventIngester.EventIngestion
             // EventHubProducerClient send an entire batch to a single partition.
             _bufferedClient = new EventHubBufferedProducerClient(eventHubConnectionString, eventHubName);
 
-            // The failure handler is required and invoked after all allowable retries were applied.
-            _bufferedClient.SendEventBatchFailedAsync += args =>
-            {
-                Console.WriteLine($"******* Publishing failed for {args.EventBatch.Count} events.  Error: '{args.Exception.Message}'");
-                return Task.CompletedTask;
-            };
-
             // The success handler is optional.
             _bufferedClient.SendEventBatchSucceededAsync += args =>
             {
                 Console.WriteLine($"******* {args.EventBatch.Count} event were published to partition: '{args.PartitionId}");
+                return Task.CompletedTask;
+            };
+
+            // The failure handler is required and invoked after all allowable retries were applied.
+            _bufferedClient.SendEventBatchFailedAsync += args =>
+            {
+                Console.WriteLine($"******* Publishing failed for {args.EventBatch.Count} events.  Error: '{args.Exception.Message}'");
                 return Task.CompletedTask;
             };
         }
@@ -82,11 +84,11 @@ namespace eventhub_demo_eventIngester.EventIngestion
 
                 var eventData = new EventData(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(eventContainer.EventPayload)));
                 // Add metadata properties to the event
-                eventData.Properties.Add("TransactionType", eventContainer.TransactionType);
+                eventData.Properties.Add("TransactionType", eventContainer.TransactionTypeEnum.ToString());
 
                 await _bufferedClient.EnqueueEventAsync(eventData, enqueueOptions);
 
-                Console.WriteLine($"({_eventIterator++}) Added {eventContainer.TransactionType} message to cache");
+                Console.WriteLine($"({_eventIterator++}) Added {eventContainer.TransactionTypeEnum} message to cache");
 
                 //_logger.LogInformation($"Event: {JsonConvert.SerializeObject(eventContainer)}");
 
@@ -104,28 +106,32 @@ namespace eventhub_demo_eventIngester.EventIngestion
             }
             finally
             {
-               
-
                 //await _producerClient.CloseAsync();
             }
         }
-
 
         private static string DetermineParitionId(EventContainer eventContainer)
         {
             var partitionId = "0";
 
-            switch (eventContainer.TransactionType)
+            switch (eventContainer.TransactionTypeEnum)
             {
-                case "A53":
-                    partitionId = "0";
+                case TransactionTypeEnum.Gasoline:
+                    partitionId = 
+                        PartitionMapper.MapPartition(TransactionTypeEnum.Gasoline);
                     break;
 
-                case "S60":
-                    partitionId = "1";
+                case TransactionTypeEnum.Grocery:
+                    partitionId = 
+                        PartitionMapper.MapPartition(TransactionTypeEnum.Grocery);
                     break;
-                case "T60":
-                    partitionId = "2";
+
+                case TransactionTypeEnum.Lottery:
+                        partitionId = PartitionMapper.MapPartition(TransactionTypeEnum.Lottery);
+                    break;
+
+                default:
+                    partitionId = PartitionMapper.MapPartition(TransactionTypeEnum.Gasoline);
                     break;
             }
 

@@ -1,0 +1,11 @@
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\ExtraCode\obj\Debug\net7.0\ExtraCode.GeneratedMSBuildEditorConfig.editorconfig
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\ExtraCode\obj\Debug\net7.0\ExtraCode.AssemblyInfoInputs.cache
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\ExtraCode\obj\Debug\net7.0\ExtraCode.AssemblyInfo.cs
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\ExtraCode\obj\Debug\net7.0\ExtraCode.csproj.CoreCompileInputs.cache
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\ExtraCode\bin\Debug\net7.0\ExtraCode.deps.json
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\ExtraCode\bin\Debug\net7.0\ExtraCode.dll
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\ExtraCode\bin\Debug\net7.0\ExtraCode.pdb
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\ExtraCode\obj\Debug\net7.0\ExtraCode.dll
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\ExtraCode\obj\Debug\net7.0\refint\ExtraCode.dll
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\ExtraCode\obj\Debug\net7.0\ExtraCode.pdb
+C:\_vet\_vetDemos\_complete\event-messaging\eh\_eh-working-demo\eventhub-demo\ExtraCode\obj\Debug\net7.0\ref\ExtraCode.dll

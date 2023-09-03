@@ -1,13 +1,14 @@
 ﻿using eventhub_shared.Contracts;
+using eventhub_shared.Enumerations;
 
 namespace eventhub.producer.Events
 {
     /// <summary>
     /// Convenience store transaction event
     /// </summary>
-    public class S60Event : ITransactionEvent
+    public class GrocerySaleEvent : ITransactionEvent
     {
-        public S60Event(decimal totalAmount,
+        public GrocerySaleEvent(decimal totalAmount,
                         long customerId,
                         int paymentMethod,
                         string storeLocation,
@@ -21,7 +22,8 @@ namespace eventhub.producer.Events
         {
             TransactionId = Guid.NewGuid();
             TransactionDate = DateTime.UtcNow;
-            TransactionType = "S60";
+            TransactionTypeEnum = TransactionTypeEnum.Grocery;
+            //TransactionType = TransactionTypeEnum.T200.ToString();
             TotalAmount = totalAmount;
             CustomerId = customerId;
             PaymentMethod = paymentMethod;
@@ -48,7 +50,8 @@ namespace eventhub.producer.Events
 
         public Guid TransactionId { get; set; }
 
-        public string TransactionType { get; set; }
+        //public string TransactionType { get; set; }
+        public TransactionTypeEnum TransactionTypeEnum { get; set; }
 
         public DateTime TransactionDate { get; set; }
 

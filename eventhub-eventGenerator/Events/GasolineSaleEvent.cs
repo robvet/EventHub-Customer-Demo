@@ -1,13 +1,14 @@
 ﻿using eventhub_shared.Contracts;
+using eventhub_shared.Enumerations;
 
 namespace eventhub.producer.Events
 {
     /// <summary>
     /// Gasoline transaction event
     /// </summary>
-    public class A53Event : ITransactionEvent
+    public class GasolineSaleEvent : ITransactionEvent
     {
-        public A53Event(string fuelType,
+        public GasolineSaleEvent(string fuelType,
                         decimal fuelAmount,
                         decimal fuelPrice,
                         string paymentMethod,
@@ -17,7 +18,8 @@ namespace eventhub.producer.Events
         {
             TransactionId = Guid.NewGuid();
             TransactionDate = DateTime.UtcNow;
-            TransactionType = "A53";
+            //TransactionType = TransactionTypeEnum.Gasoline;
+            TransactionTypeEnum = TransactionTypeEnum.Gasoline;
             FuelType = fuelType;
             FuelAmount = fuelAmount;
             FuelPrice = fuelPrice;
@@ -34,7 +36,8 @@ namespace eventhub.producer.Events
         public string ReceiptNumber { get; set; }
         public int PumpNumber { get; set; }
         public Guid TransactionId { get; set; }
-        public string TransactionType { get; set; }
+        //public string TransactionType { get; set; }
+        public TransactionTypeEnum TransactionTypeEnum { get; set; }
         public DateTime TransactionDate { get; set; }
         public long OrderCount { get; set; }
     }

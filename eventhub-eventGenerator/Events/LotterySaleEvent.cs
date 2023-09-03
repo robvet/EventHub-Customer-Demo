@@ -1,13 +1,14 @@
 ﻿using eventhub_shared.Contracts;
+using eventhub_shared.Enumerations;
 
 namespace eventhub.producer.Events
 {
     /// <summary>
     /// Lottery ticket purchase event
     /// </summary>
-    internal class T60Event : ITransactionEvent
+    internal class LotterySaleEvent : ITransactionEvent
     {
-        public T60Event(int quantity,
+        public LotterySaleEvent(int quantity,
                         decimal price,
                         string lotteryType,
                         string winningNumbers,
@@ -18,7 +19,8 @@ namespace eventhub.producer.Events
         {
             TransactionId = Guid.NewGuid();
             TransactionDate = DateTime.UtcNow;
-            TransactionType = "T60";
+            //TransactionType = TransactionTypeEnum.T300.ToString();
+            TransactionTypeEnum = TransactionTypeEnum.Lottery;
             Quantity = quantity;
             Price = price;
             LotteryType = lotteryType;
@@ -31,6 +33,7 @@ namespace eventhub.producer.Events
         public string LotteryType { get; set; }
         public string WinningNumbers { get; set; }
         public Guid TransactionId { get; set; }
+        public TransactionTypeEnum TransactionTypeEnum { get; set; }
         public string TransactionType { get; set; }
         public DateTime TransactionDate { get; set; }
         public long OrderCount { get; set; }
